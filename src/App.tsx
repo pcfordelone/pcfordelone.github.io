@@ -1,16 +1,15 @@
-import "../src/styles/global.scss";
-import { Cover } from "./components/Cover/index";
-import { Profile } from "./components/Profile";
-import { Skills } from "./components/Skills";
+import { ProfilePage } from './pages/ProfilePage'
+
+import '../src/styles/global.scss'
+import { ApolloProvider } from '@apollo/client'
+import { client } from './lib/apollo'
 
 function App() {
   return (
-    <>
-      <Cover />
-      <Profile />
-      <Skills />
-    </>
-  );
+    <ApolloProvider client={client}>
+      <ProfilePage />
+    </ApolloProvider>
+  )
 }
 
-export default App;
+export default App
