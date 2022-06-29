@@ -15,18 +15,18 @@ export const Profile: React.FC = () => {
         <main>
           <img src={ProfileImg} alt="Profile Image" />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            porta massa sed quam finibus, ut viverra neque semper. Donec lorem
-            nisi, fermentum a ante tincidunt, ultrices pellentesque dui. In nec
-            venenatis orci.
+            Always behind a monitor. As a child, when I got my first computer,
+            at the time a 486 with Windows 3.11 and DOS 6.22, I was fascinated
+            by technology.
             <br />
             <br />
-            Nulla dictum in ligula et feugiat. Cras sapien justo, vulputate sed
-            scelerisque sit amet, cursus id diam. Sed placerat, nibh eu lacinia
-            molestie, libero risus dignissim purus, eu accumsan sem purus in
-            lacus. Integer id dignissim urna. Morbi ac nisl ut quam congue
-            bibendum. Maecenas porta magna sapien, ut feugiat sem semper ut.
-            Curabitur lorem nisi, tempor id eleifend eget, sagittis id sem.
+            On this trip, I was always torn between design and development,
+            walking primarily through design. Today I'm focused on development
+            and every day, with each new project, I realize how vast and
+            exciting this area is.
+            <br />
+            <br />
+            My current quest is to find a steady job and evolve every day.
           </p>
 
           <div>

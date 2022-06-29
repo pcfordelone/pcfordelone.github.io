@@ -14,6 +14,8 @@
       border-bottom: 2px dashed var(--gray-300);
       width: 100%;
       margin-bottom: 2rem;
+      display: flex;      
+      justify-content: center;
 
       h2 {
         display: flex;
@@ -38,18 +40,25 @@
       div {
         width: 100%;
         display: flex;
-        align-items: center;
-        justify-content: space-around;
+        align-items: center;        
+        gap: 0.5rem;
 
         div {
+          min-height: 12rem;
+          margin-bottom: 2rem;
+          padding: 1rem;                    
+          border: 1px solid var(--gray-700);
+          border-radius: 1rem;
+          
           display: flex;
           align-items: center;
-          flex-direction: column;
+          flex-direction: column;          
+          justify-content: space-between;
 
           img {
-            width: 70%;
-            height: auto;
-            cursor: pointer;
+            flex: 1;
+            width: 65%;            
+            cursor: pointer;            
 
             transition: filter 0.3s;
 
@@ -58,8 +67,19 @@
             }
           }
 
+          .whiteLogo {
+            filter: invert(100%);
+
+            transition: filter 0.3s;
+
+            &:hover {
+              filter: invert(70%)
+            }
+          }
+
           h3 {
-            margin-top: 1rem;
+            margin-top: 1rem; 
+            color: var(--gray-300);
           }
         }
       }

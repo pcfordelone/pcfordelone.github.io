@@ -1,13 +1,7 @@
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss'
 
-import {
-  ArrowDown,
-  GithubLogo,
-  LinkedinLogo,
-  User,
-  UserCircle,
-} from "phosphor-react";
-import CoverBackgroundImg from "../../assets/cover-background.png";
+import { ArrowDown, GithubLogo, LinkedinLogo, User } from 'phosphor-react'
+import CoverBackgroundImg from '../../assets/cover-background.png'
 
 export const Cover: React.FC = () => {
   return (
@@ -34,14 +28,14 @@ export const Cover: React.FC = () => {
         </main>
 
         <footer>
-          <button>
+          <a href="https://github.com/pcfordelone" target="_blank">
             <GithubLogo size={48}></GithubLogo>
-          </button>
-          <button>
+          </a>
+          <a href="https://www.linkedin.com/in/pcfordelone/" target="_blank">
             <LinkedinLogo size={48}></LinkedinLogo>
-          </button>
+          </a>
         </footer>
       </div>
     </section>
-  );
-};
+  )
+}
