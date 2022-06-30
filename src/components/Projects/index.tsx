@@ -14,7 +14,7 @@ export const Projects: React.FC = () => {
           </h2>
         </header>
         <main>
-          <div>
+          <div className={styles.projectContainer}>
             <img src={ProjectImg} alt="Print - Receitaria Escola Gourmet" />
             <h3>Sistek IT Services</h3>
             <p>
@@ -32,7 +32,7 @@ export const Projects: React.FC = () => {
               </button>
             </div>
           </div>
-          <div>
+          <div className={styles.projectContainer}>
             <img src={ProjectImg} alt="Print - Receitaria Escola Gourmet" />
             <h3>Receitaria Escola Gourmet</h3>
             <p>
@@ -50,7 +50,7 @@ export const Projects: React.FC = () => {
               </button>
             </div>
           </div>
-          <div>
+          <div className={styles.projectContainer}>
             <img src={ProjectImg} alt="Print - Receitaria Escola Gourmet" />
             <h3>Receitaria Escola Gourmet</h3>
             <p>Ecommerce to sell courses of gastronomy using Laravel.</p>
