@@ -8,7 +8,7 @@ export const Experience: React.FC = () => {
         <header>
           <h2>
             <UserGear size={64} weight="thin" />
-            Last Jobs
+            Últimos Trabalhos
           </h2>
         </header>
         <main>

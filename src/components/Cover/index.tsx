@@ -3,7 +3,20 @@ import styles from './styles.module.scss'
 import { ArrowDown, GithubLogo, LinkedinLogo, User } from 'phosphor-react'
 import CoverBackgroundImg from '../../assets/cover-background.png'
 
-export const Cover: React.FC = () => {
+interface ICoverProps {
+  scrollToProfile: () => void
+}
+
+export const Cover: React.FC<ICoverProps> = ({
+  scrollToProfile,
+}: ICoverProps) => {
+  // const scrollTo: () => void = () => {
+  //   window.scrollTo({
+  //     top: elementRef.current.offsetTop,
+  //     behavior: 'smooth',
+  //   })
+  // }
+
   return (
     <section className={styles.section}>
       <img
@@ -18,11 +31,11 @@ export const Cover: React.FC = () => {
             alt="Profile Logo"
           />
           <h1>Paulo César Fordelone</h1>
-          <p>Software Developer</p>
+          <p>Front-end Developer</p>
 
-          <button>
+          <button onClick={scrollToProfile}>
             <User size={24} />
-            About Me
+            Sobre mim
             <ArrowDown />
           </button>
         </main>

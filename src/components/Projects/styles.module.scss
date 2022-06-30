@@ -30,20 +30,21 @@
     main {
       display: flex;
       gap: 1rem;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-start;     
 
       @media only screen and (max-width: 600px) {
         flex-wrap: wrap;
+        width: 100%;
+        flex: 1;
       }
 
-      div.projectContainer {
-        max-width: calc(100% / 3);        
+      div.projectContainer {        
         display: flex;
-        flex-direction: column;
+        flex-direction: column;              
 
         @media only screen and (max-width: 600px) {
-          max-width: 100%;
+          flex-wrap: wrap;
+          
           align-items: center;
           padding: 1.5rem;          
         }
@@ -64,7 +65,7 @@
           align-items: center;
           gap: 0.5rem;
 
-          button {
+          a {
             margin-top: 1rem;
             display: flex;
             align-items: center;

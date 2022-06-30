@@ -8,13 +8,13 @@ export const Contact: React.FC = () => {
         <header>
           <h2>
             <AddressBook size={64} weight="thin" />
-            Contact
+            Contatos
           </h2>
         </header>
         <main>
           <div>
             <MapPin size={64} weight="light" />
-            <p>São Paulo/SP - Brazil</p>
+            <p>São Paulo/SP - Brasil</p>
           </div>
           <div>
             <Envelope size={64} weight="light" />
@@ -37,7 +37,7 @@ export const Contact: React.FC = () => {
               href="https://api.whatsapp.com/send?phone=5511996351018&text=Ol%C3%A1%2C%20podemos%20conversar%3F"
               target="_blank"
             >
-              11 99635-1018
+              +55 11 99635-1018
             </a>
           </div>
         </main>

@@ -22,7 +22,7 @@ export const Skills: React.FC = () => {
         <header>
           <h2>
             <Code size={58} weight="thin" />
-            Skills
+            Conhecimento
           </h2>
         </header>
         <main>

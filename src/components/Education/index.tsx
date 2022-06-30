@@ -8,7 +8,7 @@ export const Education: React.FC = () => {
         <header>
           <h2>
             <Student size={64} weight="thin" />
-            Education
+            Educação / Cursos
           </h2>
         </header>
         <main>

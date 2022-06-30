@@ -11,9 +11,8 @@ import { useRef } from 'react'
 export const ProfilePage: React.FC = () => {
   const profileRef = useRef<HTMLDivElement>(null)
 
-  function handleBackClick() {
-    //articleRef.current.scrollIntoView({ behavior: 'smooth' })
-    console.log(profileRef)
+  function handleScrollToProfile() {
+    profileRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
   const { data, loading } = useListProfileWithProjectsQuery({
@@ -26,8 +25,8 @@ export const ProfilePage: React.FC = () => {
 
   return (
     <>
-      <Cover />
-      <Profile />
+      <Cover scrollToProfile={handleScrollToProfile} />
+      <Profile ref={profileRef} />
       <Skills />
       <Projects />
       <Experience />
