@@ -41,7 +41,7 @@ export const Education: React.FC = () => {
                 utilizadas no mercado.
               </li>
               <li>
-                <strong>período:</strong> em andamento
+                <strong>período:</strong> Em andamento
               </li>
             </ul>
           </div>
@@ -49,18 +49,29 @@ export const Education: React.FC = () => {
             <h3>Universidade Anhembi Morumbi</h3>
             <ul>
               <li>
-                <strong>curso:</strong> Design Digital
-                <strong>descrição: </strong> Curso superior focado em design e
-                devolvimento de sistemas
-                <strong>período:</strong> incompleto
+                <strong>curso:</strong> Superior Design Digital
+              </li>
+              <li>
+                <strong>descrição: </strong>
+                Curso superior focado em design e devolvimento de sistemas
+              </li>
+              <li>
+                <strong>período:</strong> Incompleto
               </li>
             </ul>
           </div>
           <div>
-            <h3>Nossa Senhora do Rosário</h3>
+            <h3>Colégio Nossa Senhora do Rosário</h3>
             <ul>
               <li>
                 <strong>curso:</strong> Ensino Médio
+              </li>
+              <li>
+                <strong>descrição:</strong>
+                Finalização do Ensino Médio.
+              </li>
+              <li>
+                <strong>período:</strong> finalizado em 2000.
               </li>
             </ul>
           </div>

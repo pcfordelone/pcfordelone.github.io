@@ -1,7 +1,7 @@
-import { FileCode, GithubLogo, Link } from "phosphor-react";
-import styles from "./styles.module.scss";
+import { FileCode, GithubLogo, Link } from 'phosphor-react'
+import styles from './styles.module.scss'
 
-import Project03Img from "../../assets/project-receitaria.gif";
+import ProjectImg from '../../assets/projects-receitaria.png'
 
 export const Projects: React.FC = () => {
   return (
@@ -15,39 +15,58 @@ export const Projects: React.FC = () => {
         </header>
         <main>
           <div>
-            <img src="" alt="" />
+            <img src={ProjectImg} alt="Print - Receitaria Escola Gourmet" />
             <h3>Sistek IT Services</h3>
             <p>
               Software using ReactJS, NodeJS, TypeScript, to control company
               employees.
             </p>
-            <button>
-              <GithubLogo size={24} />
-              Github
-            </button>
+            <div>
+              <button>
+                <GithubLogo size={24} />
+                Github
+              </button>
+              <button>
+                <Link size={24} />
+                Site
+              </button>
+            </div>
           </div>
           <div>
-            <img src="" alt="" />
+            <img src={ProjectImg} alt="Print - Receitaria Escola Gourmet" />
             <h3>Receitaria Escola Gourmet</h3>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
               impedit numquam!
             </p>
-            <button>
-              <Link size={24} />
-              https://receitaria.com
-            </button>
+            <div>
+              <button>
+                <GithubLogo size={24} />
+                Github
+              </button>
+              <button>
+                <Link size={24} />
+                Site
+              </button>
+            </div>
           </div>
           <div>
+            <img src={ProjectImg} alt="Print - Receitaria Escola Gourmet" />
             <h3>Receitaria Escola Gourmet</h3>
             <p>Ecommerce to sell courses of gastronomy using Laravel.</p>
-            <button>
-              <Link size={24} />
-              https://receitaria.com
-            </button>
+            <div>
+              <button>
+                <GithubLogo size={24} />
+                Github
+              </button>
+              <button>
+                <Link size={24} />
+                Site
+              </button>
+            </div>
           </div>
         </main>
       </div>
     </div>
-  );
-};
+  )
+}

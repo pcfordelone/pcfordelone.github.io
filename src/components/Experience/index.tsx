@@ -36,6 +36,29 @@ export const Experience: React.FC = () => {
             </ul>
           </div>
           <div>
+            <h3>Agência DezemHum</h3>
+            <ul>
+              <li>
+                <strong>
+                  <Watch size={24} weight="regular" />
+                  período:
+                </strong>
+                <p>2019 a 2022</p>
+              </li>
+              <li>
+                <strong>
+                  <GearSix size={24} weight="regular" />
+                  JOB
+                </strong>
+                <p>
+                  Freelancer em desenvolvimento de sites, sistemas, design de
+                  peças publicitárias como anúncios, posts para mídias sosciais,
+                  cardápios entre outros.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div>
             <h3>Moema em Revista / ALT Publicidade</h3>
             <ul>
               <li>
@@ -51,31 +74,8 @@ export const Experience: React.FC = () => {
                   JOB
                 </strong>
                 <p>
-                  Desenvolvimento de websites, anúncios de revista, logotipos,
-                  peças digitais diversas
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3>EdukSempre</h3>
-            <ul>
-              <li>
-                <strong>
-                  <Watch size={24} weight="regular" />
-                  período:
-                </strong>
-                <p>2005</p>
-              </li>
-              <li>
-                <strong>
-                  <GearSix size={24} weight="regular" />
-                  JOB
-                </strong>
-                <p>
-                  Design de conteúdo para plataforma de E-learning, desde
-                  páginas em HTML e CSS, a aulas completas em Flash e
-                  ActionScript
+                  Desenvolvimento de websites, sistemas, anúncios de revista,
+                  logotipos, peças digitais e impressas diversas.
                 </p>
               </li>
             </ul>

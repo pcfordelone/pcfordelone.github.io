@@ -6,8 +6,16 @@ import { Skills } from '../components/Skills'
 import { Education } from '../components/Education/index'
 import { useListProfileWithProjectsQuery } from '../graphql/generated'
 import { Contact } from '../components/Contact'
+import { useRef } from 'react'
 
 export const ProfilePage: React.FC = () => {
+  const profileRef = useRef<HTMLDivElement>(null)
+
+  function handleBackClick() {
+    //articleRef.current.scrollIntoView({ behavior: 'smooth' })
+    console.log(profileRef)
+  }
+
   const { data, loading } = useListProfileWithProjectsQuery({
     variables: {
       id: 'cl4urdvh6uicg0dkdc51du7ld',
