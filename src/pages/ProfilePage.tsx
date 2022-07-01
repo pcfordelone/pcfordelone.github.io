@@ -7,6 +7,7 @@ import { Education } from '../components/Education/index'
 import { useListProfileWithProjectsQuery } from '../graphql/generated'
 import { Contact } from '../components/Contact'
 import { useRef } from 'react'
+import { ProfileInfo } from '../components/ProfileInfo'
 
 export const ProfilePage: React.FC = () => {
   const profileRef = useRef<HTMLDivElement>(null)
@@ -26,6 +27,7 @@ export const ProfilePage: React.FC = () => {
   return (
     <>
       <Cover scrollToProfile={handleScrollToProfile} />
+      <ProfileInfo />
       <Profile ref={profileRef} />
       <Skills />
       <Projects />
