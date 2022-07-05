@@ -6,8 +6,10 @@ import { Skills } from '../components/Skills'
 import { Education } from '../components/Education/index'
 import { useListProfileWithProjectsQuery } from '../graphql/generated'
 import { Contact } from '../components/Contact'
-import { useRef } from 'react'
+import { useContext, useRef } from 'react'
 import { ProfileInfo } from '../components/ProfileInfo'
+import { ProfileContext, ProfileProvider } from '../contexts/ProfileContext'
+import { Loading } from '../components/Loading'
 
 export const ProfilePage: React.FC = () => {
   const profileRef = useRef<HTMLDivElement>(null)
@@ -16,21 +18,18 @@ export const ProfilePage: React.FC = () => {
     profileRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
-  const { data, loading } = useListProfileWithProjectsQuery({
-    variables: {
-      id: 'cl4urdvh6uicg0dkdc51du7ld',
-    },
-  })
+  const { profile, isLoading, error } = useContext(ProfileContext)
 
-  console.log(data?.profile)
+  if (isLoading) return <Loading />
+  if (error) return <p>Error...</p>
 
   return (
     <>
-      <Cover scrollToProfile={handleScrollToProfile} />
+      <Cover scrollToProfile={handleScrollToProfile} profileData={profile} />
       <ProfileInfo />
-      <Profile ref={profileRef} />
+      <Profile ref={profileRef} profile={profile} />
       <Skills />
-      <Projects />
+      <Projects profile={profile} />
       <Experience />
       <Education />
       <Contact />

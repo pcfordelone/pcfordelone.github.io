@@ -8,13 +8,19 @@ query ListProfileWithProjects($id: ID) {
     github
     linkedin
     job
+    presentation
+    knowledge
     projects {
       slug
       title
       type
       url
+      github
       videoUrl
       description
+      defaultImg {
+        url
+      }
     }
   }
 }

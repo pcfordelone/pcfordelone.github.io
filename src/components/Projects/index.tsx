@@ -1,13 +1,15 @@
 import { FileCode, GithubLogo, Link } from 'phosphor-react'
 import styles from './styles.module.scss'
 
-import Project01Img from '../../assets/projects-sistek_adm.png'
-import Project02Img from '../../assets/projects-receitaria.png'
-import Project03Img from '../../assets/projects-ignite_lab.png'
-import Project04Img from '../../assets/projects-nlw8.png'
-import { forwardRef } from 'react'
+import ProjectImg from '../../assets/projects-sistek_adm.png'
 
-export const Projects = forwardRef<HTMLDivElement>(({}, ref) => {
+import { Profile } from '../../graphql/generated'
+
+interface IProjectsProps {
+  profile: Profile | undefined
+}
+
+export const Projects = ({ profile }: IProjectsProps) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -18,7 +20,34 @@ export const Projects = forwardRef<HTMLDivElement>(({}, ref) => {
           </h2>
         </header>
         <main>
-          <div className={styles.projectContainer}>
+          {profile?.projects.map((project) => (
+            <div className={styles.projectContainer} key={project.slug}>
+              {project.defaultImg?.url && (
+                <img src={project.defaultImg?.url} alt={profile.name} />
+              )}
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+
+              <div>
+                {project.github && (
+                  <a
+                    href={`https://github.com/pcfordelone/${project.github}`}
+                    target="_blank"
+                  >
+                    <GithubLogo size={24} />
+                    Github
+                  </a>
+                )}
+                {project.url && (
+                  <a href={project.url} target="_blank">
+                    <Link size={24} />
+                    Acesse
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+          {/* <div className={styles.projectContainer}>
             <img src={Project01Img} alt="Print - Receitaria Escola Gourmet" />
             <h3>Sistek IT Services</h3>
             <p>
@@ -91,9 +120,9 @@ export const Projects = forwardRef<HTMLDivElement>(({}, ref) => {
                 Github
               </a>
             </div>
-          </div>
+          </div> */}
         </main>
       </div>
     </div>
   )
-})
+}

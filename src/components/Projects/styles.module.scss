@@ -14,7 +14,7 @@
       border-bottom: 2px dashed var(--gray-300);
       width: 100%;
       margin-bottom: 2rem;
-      display: flex;      
+      display: flex;
       justify-content: center;
 
       h2 {
@@ -30,7 +30,7 @@
     main {
       display: flex;
       gap: 1rem;
-      align-items: flex-start;     
+      align-items: flex-start;
 
       @media only screen and (max-width: 600px) {
         flex-wrap: wrap;
@@ -38,19 +38,22 @@
         flex: 1;
       }
 
-      div.projectContainer {        
+      div.projectContainer {
+        flex: 1;
+
         display: flex;
-        flex-direction: column;              
+        flex-direction: column;
+        padding: 0.1rem;
 
         @media only screen and (max-width: 600px) {
           flex-wrap: wrap;
-          
+
           align-items: center;
-          padding: 1.5rem;          
+          padding: 1.5rem;
         }
 
         img {
-          width: 100%;
+          max-width: 100%;
           padding: 1rem;
           border: 2px solid var(--green-500);
           border-radius: 16px;
@@ -58,6 +61,10 @@
 
         h3 {
           margin: 1rem 0;
+        }
+
+        p {
+          font-size: 1rem;
         }
 
         div {
@@ -75,60 +82,15 @@
             background: transparent;
             color: var(--green-500);
             padding: 0.5rem 0.7rem;
-  
+
             transition: border 0.5s;
-  
+
             &:hover {
               border: 2px solid var(--green-500);
             }
           }
         }
       }
-
-        // @media only screen and (max-width: 600px) {
-        //   max-width: 100%;
-        //   padding: 1.5rem;
-                  
-        //   div.projectContainer {
-        //     display: flex;
-        //     flex-direction: column;
-        //     align-items: center;
-        //     justify-content: center;
-
-        //     h3 {
-        //       margin: 2rem;
-        //     }
-            
-
-
-        //   }
-
-        //   div {
-        //     display: flex;
-        //     align-items: center;
-        //     gap: 0.5rem;
-  
-        //     button {
-        //       margin-top: 1rem;
-        //       display: flex;
-        //       align-items: center;
-        //       gap: 0.3rem;
-        //       border: 2px solid var(--gray-300);
-        //       border-radius: 8px;
-        //       background: transparent;
-        //       color: var(--green-500);
-        //       padding: 0.5rem 0.7rem;
-    
-        //       transition: border 0.5s;
-    
-        //       &:hover {
-        //         border: 2px solid var(--green-500);
-        //       }
-        //     }
-        //   }
-        // }
-
-        
     }
   }
 }

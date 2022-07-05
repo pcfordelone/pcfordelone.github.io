@@ -1610,8 +1610,10 @@ export type Profile = Node & {
   /** The unique identifier */
   id: Scalars['ID'];
   job?: Maybe<Scalars['String']>;
+  knowledge?: Maybe<Scalars['String']>;
   linkedin?: Maybe<Scalars['String']>;
   name: Scalars['String'];
+  presentation?: Maybe<Scalars['String']>;
   projects: Array<Project>;
   /** The time the document was published. Null on documents in draft stage. */
   publishedAt?: Maybe<Scalars['DateTime']>;
@@ -1717,8 +1719,10 @@ export type ProfileCreateInput = {
   from?: InputMaybe<Scalars['String']>;
   github?: InputMaybe<Scalars['String']>;
   job?: InputMaybe<Scalars['String']>;
+  knowledge?: InputMaybe<Scalars['String']>;
   linkedin?: InputMaybe<Scalars['String']>;
   name: Scalars['String'];
+  presentation?: InputMaybe<Scalars['String']>;
   projects?: InputMaybe<ProjectCreateManyInlineInput>;
   skills?: InputMaybe<SkillCreateManyInlineInput>;
   updatedAt?: InputMaybe<Scalars['DateTime']>;
@@ -1884,6 +1888,25 @@ export type ProfileManyWhereInput = {
   job_not_starts_with?: InputMaybe<Scalars['String']>;
   /** All values starting with the given string. */
   job_starts_with?: InputMaybe<Scalars['String']>;
+  knowledge?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  knowledge_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  knowledge_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  knowledge_in?: InputMaybe<Array<Scalars['String']>>;
+  /** All values that are not equal to given value. */
+  knowledge_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  knowledge_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  knowledge_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  knowledge_not_in?: InputMaybe<Array<Scalars['String']>>;
+  /** All values not starting with the given string. */
+  knowledge_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  knowledge_starts_with?: InputMaybe<Scalars['String']>;
   linkedin?: InputMaybe<Scalars['String']>;
   /** All values containing the given string. */
   linkedin_contains?: InputMaybe<Scalars['String']>;
@@ -1922,6 +1945,25 @@ export type ProfileManyWhereInput = {
   name_not_starts_with?: InputMaybe<Scalars['String']>;
   /** All values starting with the given string. */
   name_starts_with?: InputMaybe<Scalars['String']>;
+  presentation?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  presentation_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  presentation_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  presentation_in?: InputMaybe<Array<Scalars['String']>>;
+  /** All values that are not equal to given value. */
+  presentation_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  presentation_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  presentation_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  presentation_not_in?: InputMaybe<Array<Scalars['String']>>;
+  /** All values not starting with the given string. */
+  presentation_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  presentation_starts_with?: InputMaybe<Scalars['String']>;
   projects_every?: InputMaybe<ProjectWhereInput>;
   projects_none?: InputMaybe<ProjectWhereInput>;
   projects_some?: InputMaybe<ProjectWhereInput>;
@@ -1999,10 +2041,14 @@ export enum ProfileOrderByInput {
   IdDesc = 'id_DESC',
   JobAsc = 'job_ASC',
   JobDesc = 'job_DESC',
+  KnowledgeAsc = 'knowledge_ASC',
+  KnowledgeDesc = 'knowledge_DESC',
   LinkedinAsc = 'linkedin_ASC',
   LinkedinDesc = 'linkedin_DESC',
   NameAsc = 'name_ASC',
   NameDesc = 'name_DESC',
+  PresentationAsc = 'presentation_ASC',
+  PresentationDesc = 'presentation_DESC',
   PublishedAtAsc = 'publishedAt_ASC',
   PublishedAtDesc = 'publishedAt_DESC',
   UpdatedAtAsc = 'updatedAt_ASC',
@@ -2018,8 +2064,10 @@ export type ProfileUpdateInput = {
   from?: InputMaybe<Scalars['String']>;
   github?: InputMaybe<Scalars['String']>;
   job?: InputMaybe<Scalars['String']>;
+  knowledge?: InputMaybe<Scalars['String']>;
   linkedin?: InputMaybe<Scalars['String']>;
   name?: InputMaybe<Scalars['String']>;
+  presentation?: InputMaybe<Scalars['String']>;
   projects?: InputMaybe<ProjectUpdateManyInlineInput>;
   skills?: InputMaybe<SkillUpdateManyInlineInput>;
   whatsapp?: InputMaybe<Scalars['String']>;
@@ -2048,8 +2096,10 @@ export type ProfileUpdateManyInput = {
   from?: InputMaybe<Scalars['String']>;
   github?: InputMaybe<Scalars['String']>;
   job?: InputMaybe<Scalars['String']>;
+  knowledge?: InputMaybe<Scalars['String']>;
   linkedin?: InputMaybe<Scalars['String']>;
   name?: InputMaybe<Scalars['String']>;
+  presentation?: InputMaybe<Scalars['String']>;
   whatsapp?: InputMaybe<Scalars['String']>;
 };
 
@@ -2232,6 +2282,25 @@ export type ProfileWhereInput = {
   job_not_starts_with?: InputMaybe<Scalars['String']>;
   /** All values starting with the given string. */
   job_starts_with?: InputMaybe<Scalars['String']>;
+  knowledge?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  knowledge_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  knowledge_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  knowledge_in?: InputMaybe<Array<Scalars['String']>>;
+  /** All values that are not equal to given value. */
+  knowledge_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  knowledge_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  knowledge_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  knowledge_not_in?: InputMaybe<Array<Scalars['String']>>;
+  /** All values not starting with the given string. */
+  knowledge_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  knowledge_starts_with?: InputMaybe<Scalars['String']>;
   linkedin?: InputMaybe<Scalars['String']>;
   /** All values containing the given string. */
   linkedin_contains?: InputMaybe<Scalars['String']>;
@@ -2270,6 +2339,25 @@ export type ProfileWhereInput = {
   name_not_starts_with?: InputMaybe<Scalars['String']>;
   /** All values starting with the given string. */
   name_starts_with?: InputMaybe<Scalars['String']>;
+  presentation?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  presentation_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  presentation_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  presentation_in?: InputMaybe<Array<Scalars['String']>>;
+  /** All values that are not equal to given value. */
+  presentation_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  presentation_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  presentation_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  presentation_not_in?: InputMaybe<Array<Scalars['String']>>;
+  /** All values not starting with the given string. */
+  presentation_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  presentation_starts_with?: InputMaybe<Scalars['String']>;
   projects_every?: InputMaybe<ProjectWhereInput>;
   projects_none?: InputMaybe<ProjectWhereInput>;
   projects_some?: InputMaybe<ProjectWhereInput>;
@@ -5423,7 +5511,7 @@ export type ListProfileWithProjectsQueryVariables = Exact<{
 }>;
 
 
-export type ListProfileWithProjectsQuery = { __typename?: 'Query', profile?: { __typename?: 'Profile', id: string, name: string, email?: string | null, birthday?: any | null, from?: string | null, github?: string | null, linkedin?: string | null, job?: string | null, projects: Array<{ __typename?: 'Project', slug: string, title: string, type: Array<ProjectType>, url?: string | null, videoUrl?: string | null, description?: string | null }> } | null };
+export type ListProfileWithProjectsQuery = { __typename?: 'Query', profile?: { __typename?: 'Profile', id: string, name: string, email?: string | null, birthday?: any | null, from?: string | null, github?: string | null, linkedin?: string | null, job?: string | null, presentation?: string | null, knowledge?: string | null, projects: Array<{ __typename?: 'Project', slug: string, title: string, type: Array<ProjectType>, url?: string | null, github?: string | null, videoUrl?: string | null, description?: string | null, defaultImg?: { __typename?: 'Asset', url: string } | null }> } | null };
 
 
 export const ListProfileWithProjectsDocument = gql`
@@ -5437,13 +5525,19 @@ export const ListProfileWithProjectsDocument = gql`
     github
     linkedin
     job
+    presentation
+    knowledge
     projects {
       slug
       title
       type
       url
+      github
       videoUrl
       description
+      defaultImg {
+        url
+      }
     }
   }
 }

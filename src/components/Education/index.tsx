@@ -19,9 +19,9 @@ export const Education: React.FC = () => {
                 <strong>curso:</strong> Ignite
               </li>
               <li>
-                <strong>descrição:</strong>
-                Curso voltado a especialização em React e Node JS contendo as
-                tecnologias mais modernas e exigidas no mercado.
+                <strong>descrição:</strong> Curso voltado a especialização em
+                React e Node JS contendo as tecnologias mais modernas e exigidas
+                no mercado.
               </li>
               <li>
                 <strong>período:</strong> em andamento
@@ -35,10 +35,9 @@ export const Education: React.FC = () => {
                 <strong>curso:</strong> Full Cycle
               </li>
               <li>
-                <strong>descrição:</strong>
-                Curso prático voltado a criação de um Aplicativo completo
-                utilizando microsserviços e as tecnologias mais atuais e
-                utilizadas no mercado.
+                <strong>descrição:</strong> Curso prático voltado a criação de
+                um Aplicativo completo utilizando microsserviços e as
+                tecnologias mais atuais e utilizadas no mercado.
               </li>
               <li>
                 <strong>período:</strong> Em andamento
@@ -52,8 +51,8 @@ export const Education: React.FC = () => {
                 <strong>curso:</strong> Superior Design Digital
               </li>
               <li>
-                <strong>descrição: </strong>
-                Curso superior focado em design e devolvimento de sistemas
+                <strong>descrição: </strong> Curso superior focado em design e
+                devolvimento de sistemas
               </li>
               <li>
                 <strong>período:</strong> Incompleto
@@ -67,8 +66,7 @@ export const Education: React.FC = () => {
                 <strong>curso:</strong> Ensino Médio
               </li>
               <li>
-                <strong>descrição:</strong>
-                Finalização do Ensino Médio.
+                <strong>descrição:</strong> Finalização do Ensino Médio.
               </li>
               <li>
                 <strong>período:</strong> finalizado em 2000.
