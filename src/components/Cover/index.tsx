@@ -42,10 +42,7 @@ export const Cover: React.FC<ICoverProps> = ({
               Sobre mim
               <ArrowDown />
             </button>
-            <a
-              href="public/curriculo-paulo_cesar_fordelone-2022.pdf"
-              target="_blank"
-            >
+            <a href="curriculo-paulo_cesar_fordelone-2022.pdf" target="_blank">
               <FilePdf size={24} />
               Versão em PDF
               <ArrowDown />

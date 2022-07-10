@@ -8,7 +8,6 @@ import LaravelLogoImg from "../../assets/laravel-icon.svg";
 import PrismaLogoImg from "../../assets/prisma-icon.svg";
 import GraphQlLogoImg from "../../assets/graphql-icon.svg";
 import JavascriptLogoImg from "../../assets/javascript-icon.svg";
-import NextJsLogoImg from "../../assets/next-js-icon.svg";
 import MuiLogoImg from "../../assets/mui-icon.svg";
 import TailwindCssLogoImg from "../../assets/tailwind-css-icon.svg";
 import SassLogoImg from "../../assets/sass-icon.svg";
