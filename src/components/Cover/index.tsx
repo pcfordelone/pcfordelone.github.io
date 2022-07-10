@@ -1,12 +1,19 @@
-import styles from './styles.module.scss'
+import styles from "./styles.module.scss";
 
-import { ArrowDown, GithubLogo, LinkedinLogo, User } from 'phosphor-react'
-import CoverBackgroundImg from '../../assets/cover-background.png'
-import { Profile } from '../../graphql/generated'
+import {
+  ArrowDown,
+  FilePdf,
+  GithubLogo,
+  LinkedinLogo,
+  Printer,
+  User,
+} from "phosphor-react";
+import CoverBackgroundImg from "../../assets/cover-background.png";
+import { Profile } from "../../graphql/generated";
 
 interface ICoverProps {
-  scrollToProfile: () => void
-  profileData: Profile | undefined
+  scrollToProfile: () => void;
+  profileData: Profile | undefined;
 }
 
 export const Cover: React.FC<ICoverProps> = ({
@@ -29,11 +36,21 @@ export const Cover: React.FC<ICoverProps> = ({
           <h1>{profileData?.name}</h1>
           <p>{profileData?.job}</p>
 
-          <button onClick={scrollToProfile}>
-            <User size={24} />
-            Sobre mim
-            <ArrowDown />
-          </button>
+          <div>
+            <button onClick={scrollToProfile}>
+              <User size={24} />
+              Sobre mim
+              <ArrowDown />
+            </button>
+            <a
+              href="public/curriculo-paulo_cesar_fordelone-2022.pdf"
+              target="_blank"
+            >
+              <FilePdf size={24} />
+              Versão em PDF
+              <ArrowDown />
+            </a>
+          </div>
         </main>
 
         <footer>
@@ -46,5 +63,5 @@ export const Cover: React.FC<ICoverProps> = ({
         </footer>
       </div>
     </section>
-  )
-}
+  );
+};
