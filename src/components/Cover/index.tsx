@@ -5,10 +5,12 @@ import {
   FilePdf,
   GithubLogo,
   LinkedinLogo,
-  Printer,
   User,
 } from "phosphor-react";
+
 import CoverBackgroundImg from "../../assets/cover-background.png";
+import LogoImg from "../../assets/logo.png";
+
 import { Profile } from "../../graphql/generated";
 
 interface ICoverProps {
@@ -29,10 +31,7 @@ export const Cover: React.FC<ICoverProps> = ({
       />
       <div className={styles.container}>
         <main>
-          <img
-            src="https://avatars.githubusercontent.com/u/7582747?v=4"
-            alt="Profile Logo"
-          />
+          <img src={LogoImg} alt="Profile Logo" />
           <h1>{profileData?.name}</h1>
           <p>{profileData?.job}</p>
 
