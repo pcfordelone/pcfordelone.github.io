@@ -1,5 +1,5 @@
-import { Student } from 'phosphor-react'
-import styles from './styles.module.scss'
+import { Student } from "phosphor-react";
+import styles from "./styles.module.scss";
 
 export const Education: React.FC = () => {
   return (
@@ -45,6 +45,53 @@ export const Education: React.FC = () => {
             </ul>
           </div>
           <div>
+            <h3>School of Net</h3>
+            <ul>
+              <li>
+                <strong>curso:</strong> Diversos
+              </li>
+              <li>
+                <strong>descrição:</strong> Mini cursos em várias tecnologias
+                como básico a avançado em JavaScript, ES6, NodeJS, React,
+                Laravel, entre outros.
+              </li>
+              <li>
+                <strong>período:</strong> 2016 até o momento
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Code Education</h3>
+            <ul>
+              <li>
+                <strong>curso:</strong> Trilhando o caminho com Frameworks
+              </li>
+              <li>
+                <strong>descrição:</strong> Curso voltado a Frameworks em PHP
+                como Laravel, Apigility e Symphony 2. Curso incluir também um
+                módulo inicial de Git.
+              </li>
+              <li>
+                <strong>período:</strong> Concluído em 2016
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Code Education</h3>
+            <ul>
+              <li>
+                <strong>curso:</strong> Trilhando caminho com PHP
+              </li>
+              <li>
+                <strong>descrição: </strong> Curso contendo PHP Foundation,
+                Orientação a Objetos, Design Patterns entre outros.
+              </li>
+              <li>
+                <strong>período:</strong> Concluído em 2015
+              </li>
+            </ul>
+          </div>
+          <div>
             <h3>Universidade Anhembi Morumbi</h3>
             <ul>
               <li>
@@ -55,26 +102,12 @@ export const Education: React.FC = () => {
                 devolvimento de sistemas
               </li>
               <li>
-                <strong>período:</strong> Incompleto
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3>Colégio Nossa Senhora do Rosário</h3>
-            <ul>
-              <li>
-                <strong>curso:</strong> Ensino Médio
-              </li>
-              <li>
-                <strong>descrição:</strong> Finalização do Ensino Médio.
-              </li>
-              <li>
-                <strong>período:</strong> finalizado em 2000.
+                <strong>período:</strong> Não concluído
               </li>
             </ul>
           </div>
         </main>
       </div>
     </div>
-  )
-}
+  );
+};

@@ -1,5 +1,5 @@
-import { GearSix, UserGear, Watch } from 'phosphor-react'
-import styles from './styles.module.scss'
+import { GearSix, UserGear, Watch } from "phosphor-react";
+import styles from "./styles.module.scss";
 
 export const Experience: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ export const Experience: React.FC = () => {
         </header>
         <main>
           <div>
-            <h3>Freelancer</h3>
+            <h3>Fordelone Comunicação / Autônomo</h3>
             <ul>
               <li>
                 <strong>
@@ -83,5 +83,5 @@ export const Experience: React.FC = () => {
         </main>
       </div>
     </div>
-  )
-}
+  );
+};
