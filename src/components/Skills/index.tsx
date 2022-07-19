@@ -14,24 +14,22 @@ import SassLogoImg from "../../assets/sass-icon.svg";
 import MySqlLogoImg from "../../assets/mysql-icon.svg";
 
 import styles from "./styles.module.scss";
+import { useProfile } from "../../contexts/useProfile";
 
 export const Skills: React.FC = () => {
+  const { profile } = useProfile();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <header>
           <h2>
             <Code size={58} weight="thin" />
-            Conhecimento
+            Skills
           </h2>
         </header>
         <main>
-          <p>
-            Atualmente, estou buscando a especialização em front-end, mais
-            especificamente em React. Abaixo listo algumas das tecnologias que
-            tenho conhecimento e também algumas tecnologias que são alvo de meus
-            atuais estudos:
-          </p>
+          <p>{profile?.knowledge}</p>
 
           <div>
             <div>
@@ -58,8 +56,7 @@ export const Skills: React.FC = () => {
               <img src={ReactLogoImg} alt="React Logo" />
               <h3>React JS</h3>
             </div>
-          </div>
-          <div>
+
             <div>
               <img src={TailwindCssLogoImg} alt="NodeJS Logo" />
               <h3>TailwindCSS</h3>

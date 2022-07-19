@@ -1613,6 +1613,7 @@ export type Profile = Node & {
   knowledge?: Maybe<Scalars['String']>;
   linkedin?: Maybe<Scalars['String']>;
   name: Scalars['String'];
+  phone?: Maybe<Scalars['String']>;
   presentation?: Maybe<Scalars['String']>;
   projects: Array<Project>;
   /** The time the document was published. Null on documents in draft stage. */
@@ -1722,6 +1723,7 @@ export type ProfileCreateInput = {
   knowledge?: InputMaybe<Scalars['String']>;
   linkedin?: InputMaybe<Scalars['String']>;
   name: Scalars['String'];
+  phone?: InputMaybe<Scalars['String']>;
   presentation?: InputMaybe<Scalars['String']>;
   projects?: InputMaybe<ProjectCreateManyInlineInput>;
   skills?: InputMaybe<SkillCreateManyInlineInput>;
@@ -1945,6 +1947,25 @@ export type ProfileManyWhereInput = {
   name_not_starts_with?: InputMaybe<Scalars['String']>;
   /** All values starting with the given string. */
   name_starts_with?: InputMaybe<Scalars['String']>;
+  phone?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  phone_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  phone_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  phone_in?: InputMaybe<Array<Scalars['String']>>;
+  /** All values that are not equal to given value. */
+  phone_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  phone_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  phone_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  phone_not_in?: InputMaybe<Array<Scalars['String']>>;
+  /** All values not starting with the given string. */
+  phone_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  phone_starts_with?: InputMaybe<Scalars['String']>;
   presentation?: InputMaybe<Scalars['String']>;
   /** All values containing the given string. */
   presentation_contains?: InputMaybe<Scalars['String']>;
@@ -2047,6 +2068,8 @@ export enum ProfileOrderByInput {
   LinkedinDesc = 'linkedin_DESC',
   NameAsc = 'name_ASC',
   NameDesc = 'name_DESC',
+  PhoneAsc = 'phone_ASC',
+  PhoneDesc = 'phone_DESC',
   PresentationAsc = 'presentation_ASC',
   PresentationDesc = 'presentation_DESC',
   PublishedAtAsc = 'publishedAt_ASC',
@@ -2067,6 +2090,7 @@ export type ProfileUpdateInput = {
   knowledge?: InputMaybe<Scalars['String']>;
   linkedin?: InputMaybe<Scalars['String']>;
   name?: InputMaybe<Scalars['String']>;
+  phone?: InputMaybe<Scalars['String']>;
   presentation?: InputMaybe<Scalars['String']>;
   projects?: InputMaybe<ProjectUpdateManyInlineInput>;
   skills?: InputMaybe<SkillUpdateManyInlineInput>;
@@ -2099,6 +2123,7 @@ export type ProfileUpdateManyInput = {
   knowledge?: InputMaybe<Scalars['String']>;
   linkedin?: InputMaybe<Scalars['String']>;
   name?: InputMaybe<Scalars['String']>;
+  phone?: InputMaybe<Scalars['String']>;
   presentation?: InputMaybe<Scalars['String']>;
   whatsapp?: InputMaybe<Scalars['String']>;
 };
@@ -2339,6 +2364,25 @@ export type ProfileWhereInput = {
   name_not_starts_with?: InputMaybe<Scalars['String']>;
   /** All values starting with the given string. */
   name_starts_with?: InputMaybe<Scalars['String']>;
+  phone?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  phone_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  phone_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  phone_in?: InputMaybe<Array<Scalars['String']>>;
+  /** All values that are not equal to given value. */
+  phone_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  phone_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  phone_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  phone_not_in?: InputMaybe<Array<Scalars['String']>>;
+  /** All values not starting with the given string. */
+  phone_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  phone_starts_with?: InputMaybe<Scalars['String']>;
   presentation?: InputMaybe<Scalars['String']>;
   /** All values containing the given string. */
   presentation_contains?: InputMaybe<Scalars['String']>;
@@ -2555,6 +2599,7 @@ export type ProjectCreateInput = {
   cl4urv5n415v101ui7wxfab30?: InputMaybe<ProfileCreateManyInlineInput>;
   createdAt?: InputMaybe<Scalars['DateTime']>;
   defaultImg?: InputMaybe<AssetCreateOneInlineInput>;
+  /** description input for default locale (en) */
   description?: InputMaybe<Scalars['String']>;
   github?: InputMaybe<Scalars['String']>;
   /** Inline mutations for managing document localizations excluding the default locale */
@@ -2571,6 +2616,7 @@ export type ProjectCreateInput = {
 
 export type ProjectCreateLocalizationDataInput = {
   createdAt?: InputMaybe<Scalars['DateTime']>;
+  description?: InputMaybe<Scalars['String']>;
   title: Scalars['String'];
   updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
@@ -2636,25 +2682,6 @@ export type ProjectManyWhereInput = {
   createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>;
   createdBy?: InputMaybe<UserWhereInput>;
   defaultImg?: InputMaybe<AssetWhereInput>;
-  description?: InputMaybe<Scalars['String']>;
-  /** All values containing the given string. */
-  description_contains?: InputMaybe<Scalars['String']>;
-  /** All values ending with the given string. */
-  description_ends_with?: InputMaybe<Scalars['String']>;
-  /** All values that are contained in given list. */
-  description_in?: InputMaybe<Array<Scalars['String']>>;
-  /** All values that are not equal to given value. */
-  description_not?: InputMaybe<Scalars['String']>;
-  /** All values not containing the given string. */
-  description_not_contains?: InputMaybe<Scalars['String']>;
-  /** All values not ending with the given string */
-  description_not_ends_with?: InputMaybe<Scalars['String']>;
-  /** All values that are not contained in given list. */
-  description_not_in?: InputMaybe<Array<Scalars['String']>>;
-  /** All values not starting with the given string. */
-  description_not_starts_with?: InputMaybe<Scalars['String']>;
-  /** All values starting with the given string. */
-  description_starts_with?: InputMaybe<Scalars['String']>;
   github?: InputMaybe<Scalars['String']>;
   /** All values containing the given string. */
   github_contains?: InputMaybe<Scalars['String']>;
@@ -2832,6 +2859,7 @@ export enum ProjectType {
 export type ProjectUpdateInput = {
   cl4urv5n415v101ui7wxfab30?: InputMaybe<ProfileUpdateManyInlineInput>;
   defaultImg?: InputMaybe<AssetUpdateOneInlineInput>;
+  /** description input for default locale (en) */
   description?: InputMaybe<Scalars['String']>;
   github?: InputMaybe<Scalars['String']>;
   /** Manage document localizations */
@@ -2846,6 +2874,7 @@ export type ProjectUpdateInput = {
 };
 
 export type ProjectUpdateLocalizationDataInput = {
+  description?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
 };
 
@@ -2882,11 +2911,28 @@ export type ProjectUpdateManyInlineInput = {
 };
 
 export type ProjectUpdateManyInput = {
+  /** description input for default locale (en) */
   description?: InputMaybe<Scalars['String']>;
   github?: InputMaybe<Scalars['String']>;
+  /** Optional updates to localizations */
+  localizations?: InputMaybe<ProjectUpdateManyLocalizationsInput>;
   type?: InputMaybe<Array<ProjectType>>;
   url?: InputMaybe<Scalars['String']>;
   videoUrl?: InputMaybe<Scalars['String']>;
+};
+
+export type ProjectUpdateManyLocalizationDataInput = {
+  description?: InputMaybe<Scalars['String']>;
+};
+
+export type ProjectUpdateManyLocalizationInput = {
+  data: ProjectUpdateManyLocalizationDataInput;
+  locale: Locale;
+};
+
+export type ProjectUpdateManyLocalizationsInput = {
+  /** Localizations to update */
+  update?: InputMaybe<Array<ProjectUpdateManyLocalizationInput>>;
 };
 
 export type ProjectUpdateManyWithNestedWhereInput = {
@@ -5511,7 +5557,7 @@ export type ListProfileWithProjectsQueryVariables = Exact<{
 }>;
 
 
-export type ListProfileWithProjectsQuery = { __typename?: 'Query', profile?: { __typename?: 'Profile', id: string, name: string, email?: string | null, birthday?: any | null, from?: string | null, github?: string | null, linkedin?: string | null, job?: string | null, presentation?: string | null, knowledge?: string | null, projects: Array<{ __typename?: 'Project', slug: string, title: string, type: Array<ProjectType>, url?: string | null, github?: string | null, videoUrl?: string | null, description?: string | null, defaultImg?: { __typename?: 'Asset', url: string } | null }> } | null };
+export type ListProfileWithProjectsQuery = { __typename?: 'Query', profile?: { __typename?: 'Profile', id: string, name: string, email?: string | null, whatsapp?: string | null, birthday?: any | null, from?: string | null, github?: string | null, linkedin?: string | null, job?: string | null, presentation?: string | null, knowledge?: string | null, projects: Array<{ __typename?: 'Project', slug: string, title: string, type: Array<ProjectType>, url?: string | null, github?: string | null, videoUrl?: string | null, description?: string | null, defaultImg?: { __typename?: 'Asset', url: string } | null }> } | null };
 
 
 export const ListProfileWithProjectsDocument = gql`
@@ -5520,6 +5566,7 @@ export const ListProfileWithProjectsDocument = gql`
     id
     name
     email
+    whatsapp
     birthday
     from
     github

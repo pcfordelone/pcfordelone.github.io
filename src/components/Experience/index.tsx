@@ -8,29 +8,28 @@ export const Experience: React.FC = () => {
         <header>
           <h2>
             <UserGear size={64} weight="thin" />
-            Últimos Trabalhos
+            Last Jobs
           </h2>
         </header>
         <main>
           <div>
-            <h3>Fordelone Comunicação / Autônomo</h3>
+            <h3>Fordelone Comunicação / Freelancer</h3>
             <ul>
               <li>
                 <strong>
                   <Watch size={24} weight="regular" />
                   PERÍODO
                 </strong>
-                <p>2009 até os tempos atuais</p>
+                <p>since 2009</p>
               </li>
               <li>
                 <strong>
                   <GearSix size={24} weight="regular" />
-                  JOB
+                  Description
                 </strong>
                 <p>
-                  Desenvolvimento de websites, sistemas, peças gráficas,
-                  logotipos e materiais digitais e impressos dos mais variados
-                  tipos.
+                  Development of websites, systems, graphic pieces, logos and
+                  digital and printed materials of the most varied types.
                 </p>
               </li>
             </ul>
@@ -48,7 +47,7 @@ export const Experience: React.FC = () => {
               <li>
                 <strong>
                   <GearSix size={24} weight="regular" />
-                  JOB
+                  Description
                 </strong>
                 <p>
                   Freelancer em desenvolvimento de sites, sistemas, design de
@@ -71,7 +70,7 @@ export const Experience: React.FC = () => {
               <li>
                 <strong>
                   <GearSix size={24} weight="regular" />
-                  JOB
+                  Description
                 </strong>
                 <p>
                   Desenvolvimento de websites, sistemas, anúncios de revista,

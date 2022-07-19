@@ -14,7 +14,7 @@
       border-bottom: 2px dashed var(--gray-300);
       width: 100%;
       margin-bottom: 2rem;
-      display: flex;      
+      display: flex;
       justify-content: center;
 
       h2 {
@@ -48,33 +48,36 @@
       div {
         width: 100%;
         display: flex;
-        align-items: center; 
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         gap: 0.5rem;
-        
-        @media only screen and (max-width: 600px) {          
+
+        @media only screen and (max-width: 600px) {
           flex-wrap: wrap;
         }
 
         div {
+          width: 12rem;
           min-height: 12rem;
           margin-bottom: 2rem;
-          padding: 1rem;                    
+          padding: 1rem;
           border: 1px solid var(--gray-700);
           border-radius: 1rem;
 
           @media only screen and (max-width: 600px) {
             width: 48%;
           }
-          
+
           display: flex;
           align-items: center;
-          flex-direction: column;          
+          flex-direction: column;
           justify-content: space-between;
 
           img {
             flex: 1;
-            width: 65%;            
-            cursor: pointer;            
+            width: 65%;
+            cursor: pointer;
 
             transition: filter 0.3s;
 
@@ -89,12 +92,12 @@
             transition: filter 0.3s;
 
             &:hover {
-              filter: invert(70%)
+              filter: invert(70%);
             }
           }
 
           h3 {
-            margin-top: 1rem; 
+            margin-top: 1rem;
             color: var(--gray-300);
           }
         }

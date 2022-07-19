@@ -1,11 +1,11 @@
-import { Lightbulb, RocketLaunch } from 'phosphor-react'
-import styles from './styles.module.scss'
+import { Lightbulb, RocketLaunch } from "phosphor-react";
+import styles from "./styles.module.scss";
 
 export const ProfileInfo: React.FC = () => {
   return (
     <section className={styles.section}>
       <div className={styles.wrapper}>
-        <h1>Tecnologias e conceitos utilizados nesse projeto:</h1>
+        <h1>Technologies and concepts used in this project:</h1>
         <ul>
           <li>
             <RocketLaunch size={32} /> React
@@ -45,5 +45,5 @@ export const ProfileInfo: React.FC = () => {
         </ul>
       </div>
     </section>
-  )
-}
+  );
+};

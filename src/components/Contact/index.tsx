@@ -1,20 +1,23 @@
-import { AddressBook, Envelope, MapPin, WhatsappLogo } from 'phosphor-react'
-import styles from './styles.module.scss'
+import { AddressBook, Envelope, MapPin, WhatsappLogo } from "phosphor-react";
+import { useProfile } from "../../contexts/useProfile";
+import styles from "./styles.module.scss";
 
 export const Contact: React.FC = () => {
+  const { profile } = useProfile();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <header>
           <h2>
             <AddressBook size={64} weight="thin" />
-            Contatos
+            Contacts
           </h2>
         </header>
         <main>
           <div>
             <MapPin size={64} weight="light" />
-            <p>São Paulo/SP - Brasil</p>
+            <p>{profile?.from}</p>
           </div>
           <div>
             <Envelope size={64} weight="light" />
@@ -22,7 +25,7 @@ export const Contact: React.FC = () => {
               href="mailto:pcfordelone@gmail.com?subject=Contato via github.io"
               target="_blank"
             >
-              pcfordelone@gmail.com
+              {profile?.email}
             </a>
             <a
               href="mailto:pc@fordelone.com.br?subject=Contato via github.io"
@@ -37,11 +40,11 @@ export const Contact: React.FC = () => {
               href="https://api.whatsapp.com/send?phone=5511996351018&text=Ol%C3%A1%2C%20podemos%20conversar%3F"
               target="_blank"
             >
-              +55 11 99635-1018
+              {profile?.whatsapp}
             </a>
           </div>
         </main>
       </div>
     </div>
-  )
-}
+  );
+};

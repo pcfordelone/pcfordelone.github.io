@@ -3,6 +3,7 @@ query ListProfileWithProjects($id: ID) {
     id
     name
     email
+    whatsapp
     birthday
     from
     github

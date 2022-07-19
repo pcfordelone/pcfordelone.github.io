@@ -1,12 +1,12 @@
-import styles from './styles.module.scss'
-import ProfileImg from '../../assets/profile-img.jpg'
-import { UserCircle } from 'phosphor-react'
-import { forwardRef } from 'react'
-import { Profile as ProfileData } from '../../graphql/generated'
-import { format } from 'date-fns'
+import styles from "./styles.module.scss";
+import ProfileImg from "../../assets/profile-img.jpg";
+import { UserCircle } from "phosphor-react";
+import { forwardRef } from "react";
+import { Profile as ProfileData } from "../../graphql/generated";
+import { format } from "date-fns";
 
 interface IProfileProps {
-  profile: ProfileData | undefined
+  profile: ProfileData | undefined;
 }
 
 export const Profile = forwardRef<HTMLDivElement, IProfileProps>(
@@ -17,7 +17,7 @@ export const Profile = forwardRef<HTMLDivElement, IProfileProps>(
           <header>
             <h2>
               <UserCircle size={64} weight="thin" />
-              Apresentação
+              Profile
             </h2>
           </header>
           <main>
@@ -27,31 +27,34 @@ export const Profile = forwardRef<HTMLDivElement, IProfileProps>(
             <div>
               <ul>
                 <li>
-                  <strong>Nome Completo:</strong> {profile?.name}
+                  <strong>Name:</strong> {profile?.name}
                 </li>
                 <li>
-                  <strong>Aniversário:</strong>{' '}
+                  <strong>Birthday:</strong>{" "}
                   {format(
                     new Date(
-                      new Date(`${profile?.birthday.toString()}${'T12:00'}`),
+                      new Date(`${profile?.birthday.toString()}${"T12:00"}`)
                     ),
-                    'dd/MM/yyyy',
+                    "yyyy-MM-dd"
                   )}
                 </li>
                 <li>
                   <strong>E-mail:</strong> {profile?.email}
                 </li>
                 <li>
-                  <strong>Trabalho:</strong> {profile?.job}
+                  <strong>WhatsApp:</strong> {profile?.whatsapp}
                 </li>
                 <li>
-                  <strong>Natural de:</strong> {profile?.from}
+                  <strong>Natural from:</strong> {profile?.from}
+                </li>
+                <li>
+                  <strong>Family:</strong> I'm married and I have a son
                 </li>
               </ul>
             </div>
           </main>
         </div>
       </div>
-    )
-  },
-)
+    );
+  }
+);

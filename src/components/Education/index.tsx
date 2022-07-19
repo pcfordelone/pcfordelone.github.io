@@ -8,7 +8,7 @@ export const Education: React.FC = () => {
         <header>
           <h2>
             <Student size={64} weight="thin" />
-            Educação / Cursos
+            Education
           </h2>
         </header>
         <main>
@@ -16,15 +16,15 @@ export const Education: React.FC = () => {
             <h3>Rocketseat</h3>
             <ul>
               <li>
-                <strong>curso:</strong> Ignite
+                <strong>course:</strong> Ignite
               </li>
               <li>
-                <strong>descrição:</strong> Curso voltado a especialização em
-                React e Node JS contendo as tecnologias mais modernas e exigidas
-                no mercado.
+                <strong>description:</strong>
+                Specialization course in React and Node JS containing the most
+                modern and required technologies in the market.
               </li>
               <li>
-                <strong>período:</strong> em andamento
+                <strong>status:</strong> in progress
               </li>
             </ul>
           </div>
@@ -32,15 +32,15 @@ export const Education: React.FC = () => {
             <h3>Full Cycle</h3>
             <ul>
               <li>
-                <strong>curso:</strong> Full Cycle
+                <strong>course:</strong> Full Cycle
               </li>
               <li>
-                <strong>descrição:</strong> Curso prático voltado a criação de
-                um Aplicativo completo utilizando microsserviços e as
-                tecnologias mais atuais e utilizadas no mercado.
+                <strong>description:</strong> Practical course aimed at creating
+                a complete Application using microservices and the most
+                up-to-date technologies on the market.
               </li>
               <li>
-                <strong>período:</strong> Em andamento
+                <strong>status:</strong> in progress
               </li>
             </ul>
           </div>
@@ -48,15 +48,15 @@ export const Education: React.FC = () => {
             <h3>School of Net</h3>
             <ul>
               <li>
-                <strong>curso:</strong> Diversos
+                <strong>course:</strong> Several
               </li>
               <li>
-                <strong>descrição:</strong> Mini cursos em várias tecnologias
-                como básico a avançado em JavaScript, ES6, NodeJS, React,
-                Laravel, entre outros.
+                <strong>description:</strong> Short courses in various
+                technologies such as basic to advanced in JavaScript, ES6,
+                NodeJS, React, Laravel, among others.
               </li>
               <li>
-                <strong>período:</strong> 2016 até o momento
+                <strong>status:</strong> since 2016
               </li>
             </ul>
           </div>
@@ -67,12 +67,12 @@ export const Education: React.FC = () => {
                 <strong>curso:</strong> Trilhando o caminho com Frameworks
               </li>
               <li>
-                <strong>descrição:</strong> Curso voltado a Frameworks em PHP
-                como Laravel, Apigility e Symphony 2. Curso incluir também um
-                módulo inicial de Git.
+                <strong>description:</strong> Course focused on Frameworks in
+                PHP such as Laravel, Apigility and Symphony 2. Course also
+                include a initial Git module.
               </li>
               <li>
-                <strong>período:</strong> Concluído em 2016
+                <strong>status:</strong> completed in 2016
               </li>
             </ul>
           </div>
@@ -83,11 +83,11 @@ export const Education: React.FC = () => {
                 <strong>curso:</strong> Trilhando caminho com PHP
               </li>
               <li>
-                <strong>descrição: </strong> Curso contendo PHP Foundation,
-                Orientação a Objetos, Design Patterns entre outros.
+                <strong>description:</strong> Course containing PHP Foundation,
+                Object Orientation, Design Patterns among others.
               </li>
               <li>
-                <strong>período:</strong> Concluído em 2015
+                <strong>status:</strong> completed in 2015
               </li>
             </ul>
           </div>
@@ -95,14 +95,14 @@ export const Education: React.FC = () => {
             <h3>Universidade Anhembi Morumbi</h3>
             <ul>
               <li>
-                <strong>curso:</strong> Superior Design Digital
+                <strong>course:</strong> Graduation in Design Digital
               </li>
               <li>
-                <strong>descrição: </strong> Curso superior focado em design e
-                devolvimento de sistemas
+                <strong>description: </strong> Degree in graphic design and web
+                development
               </li>
               <li>
-                <strong>período:</strong> Não concluído
+                <strong>período:</strong> Not completed
               </li>
             </ul>
           </div>
