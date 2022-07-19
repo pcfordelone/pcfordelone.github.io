@@ -1,6 +1,6 @@
-schema: https://api-sa-east-1.graphcms.com/v2/cl4uqpxie152r01ukhgzl30e1/master
+schema: https://api-us-west-2.hygraph.com/v2/cl5slq8cw1d6l01uqdjxtdx3p/master
 
-documents: './src/graphql/**/*.graphql'
+documents: "./src/graphql/**/*.graphql"
 
 generates:
   ./src/graphql/generated.ts:
