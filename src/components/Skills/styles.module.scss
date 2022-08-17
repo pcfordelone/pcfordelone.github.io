@@ -45,7 +45,7 @@
         }
       }
 
-      div {
+      .skills_container {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -57,7 +57,7 @@
           flex-wrap: wrap;
         }
 
-        div {
+        .skill_item {
           width: 12rem;
           min-height: 12rem;
           margin-bottom: 2rem;
@@ -76,7 +76,8 @@
 
           img {
             flex: 1;
-            width: 65%;
+            max-height: 5rem;
+
             cursor: pointer;
 
             transition: filter 0.3s;

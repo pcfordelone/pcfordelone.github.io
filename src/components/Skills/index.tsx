@@ -1,23 +1,14 @@
 import { Code } from "phosphor-react";
 
-import ReactLogoImg from "../../assets/reactjs-icon.svg";
-import NodeLogoImg from "../../assets/nodejs-icon.svg";
-import HtmlLogoImg from "../../assets/w3_html5-icon.svg";
-import CSSLogoImg from "../../assets/w3_css-icon.svg";
-import LaravelLogoImg from "../../assets/laravel-icon.svg";
-import PrismaLogoImg from "../../assets/prisma-icon.svg";
-import GraphQlLogoImg from "../../assets/graphql-icon.svg";
-import JavascriptLogoImg from "../../assets/javascript-icon.svg";
-import MuiLogoImg from "../../assets/mui-icon.svg";
-import TailwindCssLogoImg from "../../assets/tailwind-css-icon.svg";
-import SassLogoImg from "../../assets/sass-icon.svg";
-import MySqlLogoImg from "../../assets/mysql-icon.svg";
-
 import styles from "./styles.module.scss";
+
 import { useProfile } from "../../contexts/useProfile";
+import { ProgressBar } from "../ProgressBar";
+import { useListSkillsQuery } from "../../graphql/generated";
 
 export const Skills: React.FC = () => {
   const { profile } = useProfile();
+  const {data} = useListSkillsQuery()
 
   return (
     <div className={styles.wrapper}>
@@ -31,60 +22,14 @@ export const Skills: React.FC = () => {
         <main>
           <p>{profile?.knowledge}</p>
 
-          <div>
-            <div>
-              <img src={HtmlLogoImg} alt="Html Logo" />
-              <h3>HTML 5</h3>
-            </div>
-            <div>
-              <img src={CSSLogoImg} alt="CSS 3 Logo" />
-              <h3>CSS</h3>
-            </div>
-            <div>
-              <img src={SassLogoImg} alt="CSS 3 Logo" />
-              <h3>SASS</h3>
-            </div>
-            <div>
-              <img src={JavascriptLogoImg} alt="CSS 3 Logo" />
-              <h3>JavaScript</h3>
-            </div>
-            <div>
-              <img src={MySqlLogoImg} alt="CSS 3 Logo" />
-              <h3>MySQL</h3>
-            </div>
-            <div>
-              <img src={ReactLogoImg} alt="React Logo" />
-              <h3>React JS</h3>
-            </div>
-
-            <div>
-              <img src={TailwindCssLogoImg} alt="NodeJS Logo" />
-              <h3>TailwindCSS</h3>
-            </div>
-            <div>
-              <img src={MuiLogoImg} alt="NodeJS Logo" />
-              <h3>MUI</h3>
-            </div>
-            <div>
-              <img src={GraphQlLogoImg} alt="NodeJS Logo" />
-              <h3>GraphQL</h3>
-            </div>
-            <div>
-              <img src={NodeLogoImg} alt="NodeJS Logo" />
-              <h3>Node JS</h3>
-            </div>
-            <div>
-              <img src={LaravelLogoImg} alt="CSS 3 Logo" />
-              <h3>Laravel</h3>
-            </div>
-            <div>
-              <img
-                className={styles.whiteLogo}
-                src={PrismaLogoImg}
-                alt="CSS 3 Logo"
-              />
-              <h3>Prisma</h3>
-            </div>
+          <div className={styles.skills_container}>
+            { data && data.skills.map((skill) => 
+              <div className={styles.skill_item} key={skill.id}>
+                <img src={skill.defaultImg && skill.defaultImg?.url || undefined} alt={skill.name} />
+                <h3>{skill.name}</h3>
+                <ProgressBar completed={skill.level || 0} text="" />
+              </div>
+            )}
           </div>
         </main>
       </div>

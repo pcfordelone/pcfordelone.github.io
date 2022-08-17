@@ -5,10 +5,6 @@
   --green-800: #38490a;
   --green-700: #263205;
 
-  --gray-500: #353333;
-  --gray-800: #161414;
-  --gray-900: #1e1e1d;
-
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
   --gray-200: #e5e7eb;
@@ -42,14 +38,14 @@ html {
   body {
     background: var(--gray-900);
     -webkit-font-smoothing: antialiased;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     color: var(--white);
 
     input,
     textarea,
     button {
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 400;
     }
 

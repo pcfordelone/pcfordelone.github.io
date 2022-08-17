@@ -1,0 +1,14 @@
+query ListSkills {
+  skills(orderBy: createdAt_ASC, last: 20) {
+    id
+    name
+    slug
+    description
+    level
+    defaultImg {
+      id
+      fileName
+      url
+    }
+  }
+}

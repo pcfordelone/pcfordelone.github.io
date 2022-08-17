@@ -1,0 +1,22 @@
+.progress_bar {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 1.2rem;
+  border-radius: 16px;
+  background-color: var(--gray-300);
+  color: #000;
+  display: flex;
+  overflow: hidden;
+
+  .step {
+    height: 100%;
+    width: 10%;
+    background: var(--green-500);
+    content: "";
+    border-right: 1px solid rgba(161, 165, 155, 0.4);
+
+    &:last-child {
+      border: none;
+    }
+  }
+}

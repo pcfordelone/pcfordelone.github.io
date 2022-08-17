@@ -1,7 +1,5 @@
-import { FileCode, GithubLogo, Link } from "phosphor-react";
+import { FileCode, GithubLogo, Link, PlusCircle } from "phosphor-react";
 import styles from "./styles.module.scss";
-
-import ProjectImg from "../../assets/projects-sistek_adm.png";
 
 import { Profile } from "../../graphql/generated";
 
@@ -25,29 +23,32 @@ export const Projects = ({ profile }: IProjectsProps) => {
               {project.defaultImg?.url && (
                 <img src={project.defaultImg?.url} alt={profile.name} />
               )}
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
 
-              <div>
-                {project.github && (
-                  <a
-                    href={`https://github.com/pcfordelone/${project.github}`}
-                    target="_blank"
-                  >
-                    <GithubLogo size={24} />
-                    Github
-                  </a>
-                )}
-                {project.url && (
-                  <a href={project.url} target="_blank">
-                    <Link size={24} />
-                    URL
-                  </a>
-                )}
+              <div className={styles.projectInfo}>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+
+                <div className={styles.linkButtons}>
+                  {project.github && (
+                    <a
+                      href={`https://github.com/pcfordelone/${project.github}`}
+                      target="_blank"
+                    >
+                      <GithubLogo size={24} />
+                      Github
+                    </a>
+                  )}
+                  {project.url && (
+                    <a href={project.url} target="_blank">
+                      <Link size={24} />
+                      URL
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
-        </main>
+          </main>
       </div>
     </div>
   );
