@@ -34,11 +34,11 @@
       justify-content: center;
       flex-wrap: wrap;
 
-      div {
-        width: 32%;
+      div.item_container {
+        width: 48%;
         min-height: 15rem;
         padding-right: 1rem;
-        border-right: 2px solid var(--green-500);
+        margin-top: 2rem;        
 
         @media only screen and (max-width: 600px) {
           width: 100%;
@@ -69,15 +69,17 @@
             display: flex;
             flex-direction: column;
   
-            strong {
-              display: flex;
-              align-items: center;
-              gap: 0.3rem;            
-            }
-  
+            
             p {
-              padding-left: 30px;
-              line-height: 1.3rem;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 0.3rem;
+              line-height: 1.4rem;
+
+              strong {
+                text-transform: uppercase;
+              }
             }
           }
         }

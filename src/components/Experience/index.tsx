@@ -1,7 +1,10 @@
 import { GearSix, UserGear, Watch } from "phosphor-react";
+import { useListJobsQuery } from "../../graphql/generated";
+
 import styles from "./styles.module.scss";
 
 export const Experience: React.FC = () => {
+  const {data} = useListJobsQuery();
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -12,73 +15,39 @@ export const Experience: React.FC = () => {
           </h2>
         </header>
         <main>
-          <div>
-            <h3>Fordelone Comunicação / Freelancer</h3>
-            <ul>
-              <li>
-                <strong>
-                  <Watch size={24} weight="regular" />
-                  PERÍODO
-                </strong>
-                <p>since 2009</p>
-              </li>
-              <li>
-                <strong>
-                  <GearSix size={24} weight="regular" />
-                  Description
-                </strong>
-                <p>
-                  Development of websites, systems, graphic pieces, logos and
-                  digital and printed materials of the most varied types.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3>Agência DezemHum</h3>
-            <ul>
-              <li>
-                <strong>
-                  <Watch size={24} weight="regular" />
-                  período:
-                </strong>
-                <p>2019 a 2022</p>
-              </li>
-              <li>
-                <strong>
-                  <GearSix size={24} weight="regular" />
-                  Description
-                </strong>
-                <p>
-                  Freelancer em desenvolvimento de sites, sistemas, design de
-                  peças publicitárias como anúncios, posts para mídias sosciais,
-                  cardápios entre outros.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3>Moema em Revista / ALT Publicidade</h3>
-            <ul>
-              <li>
-                <strong>
-                  <Watch size={24} weight="regular" />
-                  período:
-                </strong>
-                <p>2007 a 2009</p>
-              </li>
-              <li>
-                <strong>
-                  <GearSix size={24} weight="regular" />
-                  Description
-                </strong>
-                <p>
-                  Desenvolvimento de websites, sistemas, anúncios de revista,
-                  logotipos, peças digitais e impressas diversas.
-                </p>
-              </li>
-            </ul>
-          </div>
+          {data?.jobs && data?.jobs.map((item) =>           
+            <div className={styles.item_container}>
+              <h3>{item.name}</h3>
+              <ul>
+                <li>
+                  <p>
+                    <UserGear size={24} weight="regular" />
+                    <strong>
+                      PLACE: 
+                    </strong>
+                    {item.place}
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Watch size={24} weight="regular" />
+                    <strong>
+                      PERIOD: 
+                    </strong>
+                    {item.period}
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <GearSix size={24} weight="regular" />
+                    <strong>Description</strong>
+                  </p>
+                  <div dangerouslySetInnerHTML={{__html: item.description?.html || ""}}></div>
+                </li>
+              </ul>
+            </div>
+          )}
+          
         </main>
       </div>
     </div>

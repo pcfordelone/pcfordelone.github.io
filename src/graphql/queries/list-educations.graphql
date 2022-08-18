@@ -1,0 +1,9 @@
+query ListEducations {
+  educations(orderBy: createdAt_ASC, last: 20) {
+    id
+    name
+    course
+    period
+    description    
+  }
+}

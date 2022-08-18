@@ -1,0 +1,11 @@
+query ListJobs {
+  jobs(orderBy: createdAt_ASC, last: 20) {
+    id
+    name
+    period
+    place
+    description {
+      html
+    }
+  }
+}
