@@ -8,7 +8,7 @@ import { useListSkillsQuery } from "../../graphql/generated";
 
 export const Skills: React.FC = () => {
   const { profile } = useProfile();
-  const {data} = useListSkillsQuery()
+  const { data } = useListSkillsQuery()
 
   return (
     <div className={styles.wrapper}>
@@ -16,14 +16,14 @@ export const Skills: React.FC = () => {
         <header>
           <h2>
             <Code size={58} weight="thin" />
-            Skills
+            Habilidades
           </h2>
         </header>
         <main>
           <p>{profile?.knowledge}</p>
 
           <div className={styles.skills_container}>
-            { data && data.skills.map((skill) => 
+            {data && data.skills.map((skill) =>
               <div className={styles.skill_item} key={skill.id}>
                 <img src={skill.defaultImg && skill.defaultImg?.url || undefined} alt={skill.name} />
                 <h3>{skill.name}</h3>

@@ -38,12 +38,12 @@ export const Cover: React.FC<ICoverProps> = ({
           <div>
             <button onClick={scrollToProfile}>
               <User size={24} />
-              About me
+              Sobre mim
               <ArrowDown />
             </button>
-            <a href="curriculo-paulo_cesar_fordelone-2022.pdf" target="_blank">
+            <a href="curriculo-paulo_cesar_fordelone-2023.pdf" target="_blank">
               <FilePdf size={24} />
-              PDF version
+              Versão em PDF
               <ArrowDown />
             </a>
           </div>

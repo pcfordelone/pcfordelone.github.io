@@ -17,7 +17,7 @@ export const Profile = forwardRef<HTMLDivElement, IProfileProps>(
           <header>
             <h2>
               <UserCircle size={64} weight="thin" />
-              Profile
+              Perfil
             </h2>
           </header>
           <main>
@@ -27,16 +27,17 @@ export const Profile = forwardRef<HTMLDivElement, IProfileProps>(
             <div>
               <ul>
                 <li>
-                  <strong>Name:</strong> {profile?.name}
+                  <strong>Nome:</strong> {profile?.name}
                 </li>
                 <li>
-                  <strong>Birthday:</strong>{" "}
-                  {format(
+                  <strong>Data de Nascimento:</strong>{" "}
+                  {profile?.birthday && Intl.DateTimeFormat('pt-BR').format(new Date(`${profile?.birthday.toString()}${"T12:00"}`))}
+                  {/* {format(
                     new Date(
                       new Date(`${profile?.birthday.toString()}${"T12:00"}`)
                     ),
                     "yyyy-MM-dd"
-                  )}
+                  )} */}
                 </li>
                 <li>
                   <strong>E-mail:</strong> {profile?.email}
@@ -45,10 +46,10 @@ export const Profile = forwardRef<HTMLDivElement, IProfileProps>(
                   <strong>WhatsApp:</strong> {profile?.whatsapp}
                 </li>
                 <li>
-                  <strong>Natural from:</strong> {profile?.from}
+                  <strong>Natural de:</strong> {profile?.from}
                 </li>
                 <li>
-                  <strong>Family:</strong> I'm married and I have a son
+                  <strong>Família:</strong> Sou casado e tenho
                 </li>
               </ul>
             </div>

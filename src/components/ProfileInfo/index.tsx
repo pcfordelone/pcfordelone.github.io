@@ -5,7 +5,7 @@ export const ProfileInfo: React.FC = () => {
   return (
     <section className={styles.section}>
       <div className={styles.wrapper}>
-        <h1>Technologies and concepts used in this project:</h1>
+        <h1>Tecnologias e conceitos usados neste projeto:</h1>
         <ul>
           <li>
             <RocketLaunch size={32} /> React

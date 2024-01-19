@@ -8,13 +8,14 @@ interface IProjectsProps {
 }
 
 export const Projects = ({ profile }: IProjectsProps) => {
+  console.log(profile?.projects)
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <header>
           <h2>
             <FileCode size={64} weight="thin" />
-            Featured projects
+            Projetos em Destaque
           </h2>
         </header>
         <main>
@@ -48,7 +49,7 @@ export const Projects = ({ profile }: IProjectsProps) => {
               </div>
             </div>
           ))}
-          </main>
+        </main>
       </div>
     </div>
   );

@@ -3,19 +3,19 @@ import { useListEducationsQuery } from "../../graphql/generated";
 import styles from "./styles.module.scss";
 
 export const Education: React.FC = () => {
-  const {data} = useListEducationsQuery();
+  const { data } = useListEducationsQuery();
 
   return (
-    <div className={styles.wrapper}>      
+    <div className={styles.wrapper}>
       <div className={styles.container}>
         <header>
           <h2>
             <Student size={64} weight="thin" />
-            Education
+            Educação
           </h2>
         </header>
         <main>
-          {data?.educations && data.educations.map((item) =>           
+          {data?.educations && data.educations.map((item) =>
             <div key={item.id}>
               <h3>{item.name}</h3>
               <ul>
@@ -23,7 +23,7 @@ export const Education: React.FC = () => {
                   <strong>course:</strong> {item.course}
                 </li>
                 <li>
-                  <strong>description:</strong>
+                  <strong>descrição:</strong>
                   {item.description}
                 </li>
                 <li>
@@ -31,7 +31,7 @@ export const Education: React.FC = () => {
                 </li>
               </ul>
             </div>
-          )}          
+          )}
         </main>
       </div>
     </div>

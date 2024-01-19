@@ -11,7 +11,7 @@ export const Contact: React.FC = () => {
         <header>
           <h2>
             <AddressBook size={64} weight="thin" />
-            Contacts
+            Contatos
           </h2>
         </header>
         <main>

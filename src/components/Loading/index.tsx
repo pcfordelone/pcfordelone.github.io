@@ -7,7 +7,7 @@ export const Loading: React.FC = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <img src={LoadingImg} alt="Loading Image" />
-        <h3>Loading...</h3>
+        <h3>Carregando...</h3>
       </div>
     </div>
   )
