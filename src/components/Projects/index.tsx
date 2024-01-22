@@ -9,6 +9,7 @@ interface IProjectsProps {
 
 export const Projects = ({ profile }: IProjectsProps) => {
   console.log(profile?.projects)
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
